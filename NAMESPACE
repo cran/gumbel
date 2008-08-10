@@ -1,0 +1,7 @@
+### Exports
+export(dgumbel)
+export(pgumbel)
+export(rgumbel)
+export(phigumbel)
+export(invphigumbel)
+export(gumbel.MBE, gumbel.EML, gumbel.IFM, gumbel.CML)
