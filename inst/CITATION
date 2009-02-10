@@ -3,9 +3,9 @@ citHeader("To cite actuar in publications use:")
 
 citEntry(entry="Manual",
          title = "gumbel: package for Gumbel copula",
-         author = "Anne-Lise Caillat, Christophe Dutang, VŽronique Larrieu and Triet Nguyen",
+         author = "Anne-Lise Caillat, Christophe Dutang, V\'eronique Larrieu and Triet NGuyen",
 	 year = 2008,
-         note = "R package version 1.00",
+         note = "R package version 1.01",
 
          textVersion =
 	 paste(	"C. Dutang",
