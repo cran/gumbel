@@ -185,7 +185,7 @@ d\'ependance de queue dans la section \ref{dependance}.
 
 \begin{figure}[!htb]
 \begin{center}
-\includegraphics[scale=0.6]{img/densite.pdf}
+\includegraphics[scale=0.6]{img/densite}
 \caption{Densit\'e de la copule de Gumbel ($\alpha=1,5$ \`a gauche et $\alpha=3$ \`a droite)}
 \label{densite}
 \end{center}
@@ -375,7 +375,7 @@ En traÁant 10000 r\'ealisations des composantes d'un couple $(U,V)$ de loi join
 
 \begin{figure}[!htb]
 \begin{center}
-\includegraphics[scale=0.6]{img/simulation1234.pdf}
+\includegraphics[scale=0.6]{img/simulation1234.png}
 \caption{Trac\'es de couples $(u,v)$ de copule de Gumbel}
 \label{simulation1234}
 \end{center}

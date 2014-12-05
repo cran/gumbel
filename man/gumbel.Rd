@@ -34,8 +34,10 @@ gumbel.CML(x, y)
     taken to be the number required.}
   \item{alpha}{parameter of the Copula. Must be greater than \eqn{1}.}
   \item{dim}{an integer specifying the dimension of the copula.}
-  \item{t}{dummy variable of the generator \eqn{\phi} or the inverse generator \eqn{\phi^-1}. could be a n-dimensional array}
-  \item{method}{an integer code for the method used in simulation. 1 is the common frailty approach, 2 uses the K function (only valid with \code{dim}=2).}
+  \item{t}{dummy variable of the generator \eqn{\phi} or the inverse generator \eqn{\phi^-1}.
+    could be a n-dimensional array.}
+  \item{method}{an integer code for the method used in simulation. 1 is the common
+    frailty approach, 2 uses the K function (only valid with \code{dim}=2).}
   \item{x,y}{vectors of observations, realizations of random variable \eqn{X} and \eqn{Y}.}
   \item{marg}{a character string specifying the marginals of vector \eqn{(X,Y)}. It must be either 
 "exp"(default value) or "gamma".}
@@ -65,7 +67,8 @@ gumbel.CML(x, y)
 	\item{}{\eqn{u_1 <- phi(y_1/\theta)} and \eqn{u_2 <- phi(y_2/\theta)}.}
 	}
 	This algorithm works with any dimension. See Chambers et al(1976) for stable random generation.
-	The 'K' algorithm use the fact the distribution function of random variable \eqn{C(U,V)} is \eqn{K(t) = t-\phi(y)/\phi'(t)}. The algorithm is
+	The 'K' algorithm use the fact the distribution function of random variable \eqn{C(U,V)}
+        is \eqn{K(t) = t-\phi(y)/\phi'(t)}. The algorithm is
 	\itemize{
 	\item{}{generate \eqn{v_1}, \eqn{t} from uniform distribution}
 	\item{}{generate \eqn{v_2} from the \eqn{K} distribution i.e. \eqn{v_2<-K^{-1}(t)}. }
@@ -104,7 +107,8 @@ gumbel.CML(x, y)
   \emph{A method for simulating stable random variables}, Journal of the American Statistical Association.
 
  Nelsen, R. (2005),
-  \emph{Dependence Modeling with Archimedean Copulas}, booklet available at www.lclark.edu/~mathsci/brazil2.pdf.	
+  \emph{Dependence Modeling with Archimedean Copulas},
+    booklet available at www.lclark.edu/~mathsci/brazil2.pdf.
 }
 \author{
  A.-L. Caillat, C. Dutang, M. V. Larrieu and T. Nguyen
@@ -158,7 +162,8 @@ gumbel.CML(x, y)
 	for(i in seq(1,max,length.out=n)) 
 	{
 		u <- t(rgumbel(10000, i, method=2))
-		plot(u[1,], u[2,], col="green", main="Gumbel copula", xlim=c(0,1), ylim=c(0,1), pch=".")
+		plot(u[1,], u[2,], col="green", main="Gumbel copula",
+            xlim=c(0,1), ylim=c(0,1), pch=".")
 		cat()
 	}	
 	}
@@ -188,7 +193,8 @@ gumbel.CML(x, y)
 	fcol <- couleurs[trunc(z/zlim[2]*(ncol-1))+1]
 	dim(fcol) <- c(nrz,ncz)
 	fcol <- fcol[-nrz,-ncz]
-	persp(x, y, z, col=fcol, zlim=zlim, theta=30, phi=30, ticktype = "detailed", box = TRUE, 	xlab = "x", ylab = "y", zlab = "density")
+	persp(x, y, z, col=fcol, zlim=zlim, theta=30, phi=30, ticktype = "detailed",
+        box = TRUE, 	xlab = "x", ylab = "y", zlab = "density")
 	
 
 	#plot the distribution function
