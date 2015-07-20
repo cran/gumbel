@@ -67,8 +67,9 @@
 \newcommand{\txtm}[1]{\textrm{~~#1~~}}
 \newcommand{\expo}{\textsuperscript}
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{gumbel-concordance}
 
 \thispagestyle{empty}
  
@@ -298,7 +299,7 @@ C_\alpha\left(u^{\frac{1}{n}},v^{\frac{1}{n}}\right)^n = C_\alpha(u,v).
 $$
 La propri\'et\'e de max-stabilit\'e s'interpr\`ete de la mani\`ere suivante. Soient deux vecteurs
 al\'eatoires $(X_1,\dots,X_n)$ et $(Y_1,\dots,Y_n)$ identiquement distribu\'es tels que 
-les couples $(X_j, Y_j)$ ont la mÍme copule $C$. \\
+les couples $(X_j, Y_j)$ ont la m<U+00CD>me copule $C$. \\
 On pose $C_{max}$ la copule du couple 
 $(X_{(n)},Y_{(n)}) = (\underset{1\leq i\leq n}{\max}(X_i), \underset{1\leq i\leq n}{\max}(Y_i))$.
 Par \cite{nelsen2}, nous obtenons la propri\'et\'e suivante :
@@ -306,7 +307,7 @@ $$
 C_{max} = C\left(u^{\frac{1}{n}},v^{\frac{1}{n}}\right)^n.
 $$
 Autrement dit pour la copule de Gumbel, le couple $(X_j, Y_j)$ et le couple 
-$(X_{(n)},Y_{(n)})$ ont la mÍme copule.
+$(X_{(n)},Y_{(n)})$ ont la m<U+00CD>me copule.
 
 
 
@@ -481,7 +482,7 @@ la construction d'un indice.
 
 \subsection{Pr\'esentation}
 Nous avons utilis\'e la copule de Gumbel pour valoriser les couvertures indicielles cat[as-trophe]. Ces contrats sont des d\'eriv\'es
-climatiques adapt\'es \`a la r\'eassurance d'\'ev\`enement catastrophe (tempÍte, vague de froid,\dots) bas\'e sur un indice climatique
+climatiques adapt\'es \`a la r\'eassurance d'\'ev\`enement catastrophe (temp<U+00CD>te, vague de froid,\dots) bas\'e sur un indice climatique
 (force du vent, temp\'erature,\dots). Cette application num\'erique est bas\'ee sur l'article \cite{benfield}.
 
 L'indice climatique doit refl\'eter au mieux les caract\'erisques des montants des sinistres associ\'es au risque m\'et\'eo pour diminuer
@@ -577,7 +578,7 @@ $VaR_{90\%}$ & 97,24 & 100,13 & 101,23 & 102,37 & 102,72\\
 \end{table}
 
 
-Enfin, nous avons trac\'e les histogrammes (cf. figure \ref{histogramme}) \`a pas fixe et \`a mÍme effectif du payoff correspondant
+Enfin, nous avons trac\'e les histogrammes (cf. figure \ref{histogramme}) \`a pas fixe et \`a m<U+00CD>me effectif du payoff correspondant
 \`a nos donn\'ees ($\alpha_{cop}= 1,479 $). Nous pouvons constater que la distribution
 des sinistres est l\'eg\`erement asym\'etrique, surtout autour de sa moyenne. Par ailleurs, nous avons ajout\'e
 l'estimation de la densit\'e par la m\'ethode du noyau d'Epanechnikov. Maintenant, il ne reste plus qu'\`a choisir

@@ -1,3 +1,7 @@
+### Imports
+importFrom("stats", cor, dexp, dgamma, ecdf, optim, optimize, pexp, pgamma, rexp, runif, var)
+
+
 ### Exports
 export(dgumbel)
 export(pgumbel)

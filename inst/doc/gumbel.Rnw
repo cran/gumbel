@@ -68,6 +68,7 @@
 \newcommand{\expo}{\textsuperscript}
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 \thispagestyle{empty}
  
@@ -183,13 +184,13 @@ La copule de Gumbel est caract\'eris\'ee par des concentrations importantes dans
 Sur la figure \ref{densite}, on constate que la copule de Gumbel est dissym\'etrique \`a droite. Ce r\'esultat se retrouve dans les coefficients de
 d\'ependance de queue dans la section \ref{dependance}. 
 
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.6]{img/densite}
-\caption{Densit\'e de la copule de Gumbel ($\alpha=1,5$ \`a gauche et $\alpha=3$ \`a droite)}
-\label{densite}
-\end{center}
-\end {figure}
+% \begin{figure}[!htb]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/densite}
+% \caption{Densit\'e de la copule de Gumbel ($\alpha=1,5$ \`a gauche et $\alpha=3$ \`a droite)}
+% \label{densite}
+% \end{center}
+% \end {figure}
 
 
 \subsection{Copule singuli\`ere}
@@ -224,16 +225,10 @@ vers $VaR(X)+VaR(Y)$. Le caract\`ere \'eratique vient du fait que la VaR est cal
 de la fonction \code{quantile} ou de la fonction \code{VaR} du package \pkg{actuar}. } (comme le 90\expo{\`eme}
 percentile du vecteur simul\'ee).
 
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.6]{img/var90somme.pdf}
-\caption{$VaR_{90\%}(X)+VaR_{90\%}(Y) \leq VaR_{90\%}(X+Y)$}
-\label{var90somme}
-\end{center}
-\end {figure}
+
 
 \subsection{Mesures de d\'ependance}
-Il y a maintes faÁons de mesurer la d\'ependance entre deux variables al\'eatoires. Nous pr\'esentons ici le tau de Kendall
+Il y a maintes fa\c{c}ons de mesurer la d\'ependance entre deux variables al\'eatoires. Nous pr\'esentons ici le tau de Kendall
 et le rho de Spearman, deux mesures de concordance classiques. 
 
 \subsubsection{Coefficient de corr\'elation de Kendall}
@@ -369,19 +364,19 @@ o\`u $L_\Theta$ d\'esigne la transform\'ee de Laplace de la variable al\'eatoire
 \end{enumerate}
 Dans le cas de la copule de Gumbel, $\phi^{-1}(t)=e^{-t^{\frac{1}{\alpha}}}$, qui est la transform\'ee de Laplace d'une loi stable de param\`etres $(\frac{1}{\alpha},0,1,0)$. Pour plus de d\'etails sur les lois stables, se reporter \`a \cite{nolan}. Enfin pour simuler des variables al\'eatoires de loi stable, nous avons utilis\'e l'algorithme de \cite{chambers}.
 
-\subsection{Exemple de graphiques}
-
-En traÁant 10000 r\'ealisations des composantes d'un couple $(U,V)$ de loi jointe $C_\alpha$ (pour $\alpha=1,2,3,4$), on obtient les graphiques suivants.
-
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.6]{img/simulation1234.png}
-\caption{Trac\'es de couples $(u,v)$ de copule de Gumbel}
-\label{simulation1234}
-\end{center}
-\end {figure}
-
-\clearpage
+% \subsection{Exemple de graphiques}
+% 
+% En tra\c{c}ant 10000 r\'ealisations des composantes d'un couple $(U,V)$ de loi jointe $C_\alpha$ (pour $\alpha=1,2,3,4$), on obtient les graphiques suivants.
+% 
+% \begin{figure}[!htb]
+% \begin{center}
+% \includegraphics[scale=0.6]{img/simulation1234.png}
+% \caption{Trac\'es de couples $(u,v)$ de copule de Gumbel}
+% \label{simulation1234}
+% \end{center}
+% \end {figure}
+% 
+% \clearpage
 
 \section{Estimation et impl\'ementation}
 Dans un premier temps, nous rappellons les m\'ethodes d'estimation pour calibrer une copule.
@@ -536,25 +531,25 @@ Pour la suite, nous choisissons les moyennes des estimations comme valeur de nos
 Le bon ajustement des marginales se voit sur les graphes de la figure \ref{marginale}, o\`u l'on voit
 que les fonctions de r\'epartitions calibr\'ees (i.e. gamma avec les param\`etres supra) s'ajustent
 bien sur les fonctions de r\'epartitions empiriques.
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.56]{img/marginale.pdf}
-\caption{Fonctions de r\'epartitions empiriques (en noir) et calibr\'ees (en vert)}
-\label{marginale}
-\end{center}
-\end {figure}
+% \begin{figure}[!htb]
+% \begin{center}
+% \includegraphics[scale=0.56]{img/marginale.pdf}
+% \caption{Fonctions de r\'epartitions empiriques (en noir) et calibr\'ees (en vert)}
+% \label{marginale}
+% \end{center}
+% \end {figure}
 
 La bonne ad\'equation de la copule de Gumbel aux vitesses de vent maximales est confirm\'e
 par le trac\'e d'un qqplot empirique (cf. figure \ref{qqplot}). Les nuages semblent \'equivalents.
 A priori, la copule de Gumbel est faite pour mod\'eliser une d\'ependance des ``extr\^emes'', puisqu'elle
 est asym\'etrique.
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.56]{img/qqplot.pdf}
-\caption{qqplot empirique vs simul\'e}
-\label{qqplot}
-\end{center}
-\end {figure}
+% \begin{figure}[!htb]
+% \begin{center}
+% \includegraphics[scale=0.56]{img/qqplot.pdf}
+% \caption{qqplot empirique vs simul\'e}
+% \label{qqplot}
+% \end{center}
+% \end {figure}
 
 \subsection{Evaluation du payoff}
 Maintenant que l'on a calibr\'e notre copule (et les marginales), on va estimer le payoff $C_T$ par une m\'ethode
@@ -587,13 +582,13 @@ Enfin, nous avons trac\'e les histogrammes (cf. figure \ref{histogramme}) \`a pa
 des sinistres est l\'eg\`erement asym\'etrique, surtout autour de sa moyenne. Par ailleurs, nous avons ajout\'e
 l'estimation de la densit\'e par la m\'ethode du noyau d'Epanechnikov. Maintenant, il ne reste plus qu'\`a choisir
 un principe de primes et calculer le prix de ce produit de couverture indiciel virtuel.
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.56]{img/histogramme.pdf}
-\caption{Histogrammes \`a pas fixe et \`a m\^eme effectif}
-\label{histogramme}
-\end{center}
-\end {figure}
+% \begin{figure}[!htb]
+% \begin{center}
+% \includegraphics[scale=0.56]{img/histogramme.pdf}
+% \caption{Histogrammes \`a pas fixe et \`a m\^eme effectif}
+% \label{histogramme}
+% \end{center}
+% \end {figure}
 
 
 
