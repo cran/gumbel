@@ -23,7 +23,7 @@
 %%%			Sweave vignette file
 %%% 
 
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt]{article}
 
 %\VignetteIndexEntry{Key characteristics of the Gumbel copula [in French]}
 %\VignettePackage{gumbel}
@@ -41,16 +41,21 @@
 \usepackage{fancybox}
 \pagestyle{headings}
 %pour la mise en page
-\usepackage[A4]{vmargin}
-\setmarginsrb{2.9cm}{1.5cm}{2.9cm}{1cm}{\headheight}{\headsep}{\footheight}{\footskip}
-%1 est la marge gauche
-%2 est la marge en haut
-%3 est la marge droite
-%4 est la marge en bas
-%5 fixe la hauteur de l'ent\^ete
-%6 fixe la distance entre l'ent\^ete et le texte
-%7 fixe la hauteur du pied de page
-%8 fixe la distance entre le texte et le pied de page
+
+
+% layout sinon utiliser vmargin
+\normalsize\setlength{\parskip}{\baselineskip}
+\setlength{\oddsidemargin}{20mm}
+\setlength{\evensidemargin}{20mm}
+\setlength{\voffset}{-1in}
+\setlength{\hoffset}{-1in}
+\setlength{\textwidth}{175mm}
+\setlength{\topmargin}{05mm}
+\setlength{\headheight}{10mm}
+\setlength{\headsep}{10mm}
+\setlength{\topskip}{0mm}
+\setlength{\textheight}{240mm}
+
 %citation
 \usepackage{natbib}
 %note de bas de page

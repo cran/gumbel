@@ -4,8 +4,8 @@ citHeader("To cite gumbel in publications use:")
 citEntry(entry="Manual",
          title = "gumbel: package for Gumbel copula",
          author = "Christophe Dutang",
-	       year = 2015,
-         note = "R package version 1.10-1",
+	       year = 2018,
+         note = "R package version 1.10-2",
          textVersion =
 	 paste(	"C. Dutang",
 		"(2015),",
