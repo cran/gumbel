@@ -62,17 +62,17 @@ gumbel.CML(x, y)
 	algorithm (method=1) and the 'K' algorithm (method=2).
 	The common frailty algorithm (cf. Marshall & Olkin(1988)) can be sum up in three lines
 	\itemize{ 
-	\item{}{generate \eqn{y_1}, \eqn{y_2} from exponential distribution of mean 1,}
-	\item{}{generate \eqn{\theta} from a stable distribution with parameter\eqn{(1/alpha,1,1,0)},} 
-	\item{}{\eqn{u_1 <- phi(y_1/\theta)} and \eqn{u_2 <- phi(y_2/\theta)}.}
+	\item generate \eqn{y_1}, \eqn{y_2} from exponential distribution of mean 1,
+	\item generate \eqn{\theta} from a stable distribution with parameter\eqn{(1/alpha,1,1,0)}, 
+	\item \eqn{u_1 <- phi(y_1/\theta)} and \eqn{u_2 <- phi(y_2/\theta)}.
 	}
 	This algorithm works with any dimension. See Chambers et al(1976) for stable random generation.
 	The 'K' algorithm use the fact the distribution function of random variable \eqn{C(U,V)}
         is \eqn{K(t) = t-\phi(y)/\phi'(t)}. The algorithm is
 	\itemize{
-	\item{}{generate \eqn{v_1}, \eqn{t} from uniform distribution}
-	\item{}{generate \eqn{v_2} from the \eqn{K} distribution i.e. \eqn{v_2<-K^{-1}(t)}. }
-	\item{}{\eqn{u_1<-\phi^{-1}(\phi(v_1)v_2)} and \eqn{u_2<-\phi^{-1}(\phi(v_1)(1-v_2)) }.}
+	\item generate \eqn{v_1}, \eqn{t} from uniform distribution,
+	\item generate \eqn{v_2} from the \eqn{K} distribution i.e. \eqn{v_2<-K^{-1}(t)},
+	\item \eqn{u_1<-\phi^{-1}(\phi(v_1)v_2)} and \eqn{u_2<-\phi^{-1}(\phi(v_1)(1-v_2)) }.
 	}
 	Warning, the 'K' algorithm does NOT work with \code{dim>2}. 
 	

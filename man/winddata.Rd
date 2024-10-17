@@ -43,7 +43,6 @@ data(windEchirolles)
 }
 
 \source{ 
-\url{http://www.meteoisere.com/Vantage/} and 
-\url{http://hautsdulyonnais.free.fr/}
+See \url{https://meteo.data.gouv.fr/datasets}
  }
 \keyword{datasets}

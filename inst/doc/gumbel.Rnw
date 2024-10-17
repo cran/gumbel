@@ -80,9 +80,9 @@
 \vspace{10cm}
 \begin{center} {\huge \textbf{COPULE DE GUMBEL}} \end{center}
 \vspace{5cm}
-\begin{center} {\Large Caillat Anne-lise, Dutang Christophe,} \end{center}
+\begin{center} {\Large Anne-lise Caillat , Christophe Dutang,} \end{center}
 
-\begin{center} {\Large Larrieu Marie V\'eronique et NGuyen Triet} \end{center}
+\begin{center} {\Large Marie V\'eronique Larrieu  et Triet NGuyen} \end{center}
 
 \vspace{2cm}
 \begin{center} {\large Groupe de travail ISFA 3} \end{center}
@@ -492,7 +492,7 @@ climatiques adapt\'es \`a la r\'eassurance d'\'ev\`enement catastrophe (tempÍte
 L'indice climatique doit refl\'eter au mieux les caract\'erisques des montants des sinistres associ\'es au risque m\'et\'eo pour diminuer
 le risque de base. En g\'en\'eral, on choisit un panier de $n$ stations (peu \'eloign\'ees des r\'egions assur\'ees) dans lesquelles on 
 mesure la variable climatique $X_i(t)$ au cours de la p\'eriode $[t-1,t]$. Ensuite, l'indice journalier d'une station $i$ est construit
-par $I_i(t) = \min(L_i-K_i, X_i(t) - K_i)$ o\`u $K_i$ et $L_i$ sont le seuil et la limite par station. Sur une p\'eriode $T$, l'indice d'une station 
+par $I_i(t) = \min(L_i-K_i, (X_i(t) - K_i)_+)$ o\`u $K_i$ et $L_i$ sont le seuil et la limite par station. Sur une p\'eriode $T$, l'indice d'une station 
 est donc d\'efini par $S_i(T) = \sum_{t=1}^T I_i(t)$ et l'indice cumul\'e par $S_T =  \sum_{i=1}^n p_i S_i(T)$ pour une pond\'eration 
 $p_1, \dots, p_n$. Enfin le flux engendr\'e par la couverture indicielle est celui d'un call spread : $$C_T = N \times 
 \min\left(L-K, \left(S_T-K\right)_+\right),$$
